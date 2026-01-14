@@ -12,6 +12,9 @@ jobs:
       url: https://mc.thecaf.app
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
       - uses: amondnet/vercel-action@v25
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
